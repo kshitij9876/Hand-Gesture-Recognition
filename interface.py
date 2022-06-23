@@ -9,11 +9,11 @@ text_speech = pyttsx3.init()
 nlp = pipeline("mrm8488/t5-base-finetuned-common_gen")
 params = {"do_sample":False, "num_beams":2, "no_repeat_ngram_size":3, "early_stopping":True}
 
-model1 = models.load_model('Models.zip\Action_NPY_Hap_Bod.h5')
-model2 = models.load_model('Models.zip\Action_NPY_WATR_AER.h5')
-model3 = models.load_model('Models.zip\Action_NPY_I_YO.h5')
-model4 = models.load_model('Models.zip\Action_NPY_Wat_Wav.h5')
-model5 = models.load_model('Models.zip\Action_NPY_LI_GI.h5')
+model1 = models.load_model('Action_NPY_Hap_Bod.h5')
+model2 = models.load_model('Action_NPY_WATR_AER.h5')
+model3 = models.load_model('Action_NPY_I_YO.h5')
+model4 = models.load_model('Action_NPY_Wat_Wav.h5')
+model5 = models.load_model('Action_NPY_LI_GI.h5')
 
 mp_holistic = mp.solutions.holistic # Holistic model
 mp_drawing = mp.solutions.drawing_utils # Drawing utilities

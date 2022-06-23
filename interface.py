@@ -1,5 +1,5 @@
-import cv2
-import cv2 as cv
+import opencv-python-headless
+import opencv-python-headless as cv
 import numpy as np
 import streamlit as st
 import mediapipe as mp

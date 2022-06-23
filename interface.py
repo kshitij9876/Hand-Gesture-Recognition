@@ -1,5 +1,4 @@
-import opencv-python-headless as cv2
-import opencv-python-headless as cv
+import cv2
 import numpy as np
 import streamlit as st
 import mediapipe as mp
@@ -20,11 +19,11 @@ mp_holistic = mp.solutions.holistic # Holistic model
 mp_drawing = mp.solutions.drawing_utils # Drawing utilities
 
 def mediapipe_detection(image, model):
-    image = cv.cvtColor(image, cv.COLOR_BGR2RGB) # COLOR CONVERSION BGR 2 RGB
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB) # COLOR CONVERSION BGR 2 RGB
     image.flags.writeable = False                  # Image is no longer writeable
     results = model.process(image)                 # Make prediction
     image.flags.writeable = True                   # Image is now writeable 
-    #image = cv.cvtColor(image, cv.COLOR_RGB2BGR) # COLOR COVERSION RGB 2 BGR
+    #image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR) # COLOR COVERSION RGB 2 BGR
     return image, results
 
 def draw_landmarks(image, results):
@@ -175,6 +174,7 @@ app_mode = st.sidebar.selectbox('Select Page', ['Home', 'Demo'])
 if app_mode == 'Home':
     st.title('About Our Project')
     st.markdown("The goal of this research is to present and develop a technique for hand gesture recognition that incorporates MediaPipe for extracting hand landmarks and LSTM to train and recognize the gesture.")
+    st.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU0hBbUa_k1xKWJETgMkshQHnhUd9nu4RfHw&usqp=CAU',caption='Hand Gesture Recognition',use_column_width=True,)
 elif app_mode == 'Demo':
     header = st.container()
     
@@ -197,7 +197,7 @@ elif app_mode == 'Demo':
             while True:
     
                 SUCCESS, frame = cam.read()
-                frame = cv.flip(frame, 1)
+                frame = cv2.flip(frame, 1)
                 image = frame
     
                 if flag==0:

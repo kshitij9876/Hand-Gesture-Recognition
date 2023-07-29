@@ -1,3 +1,4 @@
 Hand-Gesture-Recognition and conversion to text and speech for deaf and dumb people using LSTM
 
-![Watch Video!](https://github.com/kshitij9876/Hand-Gesture-Recognition/blob/main/demo%20video.mp4)
+https://github.com/kshitij9876/Hand-Gesture-Recognition/assets/79054089/95eac348-ff5b-422a-bf68-78281c052dea
+
